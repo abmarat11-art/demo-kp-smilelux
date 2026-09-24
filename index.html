@@ -413,6 +413,24 @@ body::after{width:60vw;height:60vw;max-width:960px;max-height:960px;right:-24vw;
 @media(prefers-reduced-motion:reduce){.track .st{opacity:1;transform:none;transition:none}}
 @media print{.track .st{opacity:1;transform:none}.track{break-inside:avoid}}
 .two .note{margin-top:10px}
+.dgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+.dgrid .d{border:1px solid var(--line);background:#fff;border-radius:12px;padding:14px 16px;font-size:15px;color:var(--mut);line-height:1.55;
+  opacity:0;transform:translateY(8px);transition:opacity .4s ease,transform .4s ease}
+.dgrid.in .d{opacity:1;transform:none}
+.dgrid.in .d:nth-child(2){transition-delay:.06s}.dgrid.in .d:nth-child(3){transition-delay:.12s}
+.dgrid.in .d:nth-child(4){transition-delay:.18s}.dgrid.in .d:nth-child(5){transition-delay:.24s}.dgrid.in .d:nth-child(6){transition-delay:.3s}
+.dgrid .d b{display:block;color:var(--ink);margin-bottom:3px}
+.acc{border:1px solid var(--line);border-radius:12px;background:#fff;margin-top:12px;overflow:hidden;transition:border-color .3s ease}
+.acc:hover{border-color:var(--steel)}
+.acc>summary{cursor:pointer;padding:14px 16px;font-weight:600;font-size:16px;color:var(--ink);list-style:none;display:flex;gap:12px;justify-content:space-between;align-items:center}
+.acc>summary::-webkit-details-marker{display:none}
+.acc>summary::after{content:"+";color:var(--acc);font-size:20px;line-height:1;flex:none}
+.acc[open]>summary::after{content:"\2212"}
+.acc .accb{padding:0 16px 16px}
+.acc .accb ul{margin:0}
+.acc .accb .note{margin-top:10px}
+@media(max-width:700px){.dgrid{grid-template-columns:1fr}}
+@media print{.acc .accb{display:block!important}.acc>summary::after{display:none}}
 
 /* обзор возможностей */
 .caps{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
@@ -618,47 +636,47 @@ body::after{width:60vw;height:60vw;max-width:960px;max-height:960px;right:-24vw;
 
 
 <h2 class="rv">Как мы работаем</h2>
-<p class="rv">Без долгих обследований на полгода. Смотрим процесс, запускаем небольшой кусок на живых данных, дальше расширяем — так вы видите пользу до того, как вложили основные деньги.</p>
+<p class="rv">Без обследований на полгода: смотрим процесс, запускаем небольшой кусок на живых данных, дальше расширяем. Пользу видно до основных вложений.</p>
 <div class="flow rv">
   <div class="fs"><i>ШАГ 1</i><b>Встреча и разбор</b><span>смотрим, как приходят заявки и где ведётся долг; выбираем, с чего начать</span></div>
   <div class="fs"><i>ШАГ 2</i><b>Пилот на одной группе</b><span>несколько точек и один агент — на настоящих заявках, а не на выдуманных</span></div>
   <div class="fs"><i>ШАГ 3</i><b>Расширение</b><span>остальные точки, роли и доступы, обучение людей</span></div>
   <div class="fs"><i>ШАГ 4</i><b>Развитие</b><span>склад, производство, отчёты — по мере того, как понадобится</span></div>
 </div>
-<p class="note rv">Программа остаётся вашей: данные в вашей базе, доступы у вас, выгрузка в любой момент. Работает в браузере на телефоне и компьютере, отдельной установки не требует.</p>
+<p class="note rv">Данные в вашей базе, доступы у вас, выгрузка в любой момент. Работает в браузере — на телефоне и на компьютере.</p>
 
 <h2 class="rv">Почему к нам</h2>
 <ul class="chk rv">
-  <li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5"/><path d="M7 12.5l3.2 3.2L17 9"/></svg></span><span class="tx"><b>Делаем под процесс, а не подгоняем процесс под программу</b> — если у вас считают ящиками и пишут голосовыми, программа принимает ящики и голосовые</span></li>
-  <li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5"/><path d="M7 12.5l3.2 3.2L17 9"/></svg></span><span class="tx"><b>Показываем на живом, а не на презентации</b> — модули выше работают сегодня; на встрече откроем и дадим потыкать</span></li>
-  <li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5"/><path d="M7 12.5l3.2 3.2L17 9"/></svg></span><span class="tx"><b>Начинаем с малого</b> — первый результат виден за недели, а не после годового проекта</span></li>
-  <li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5"/><path d="M7 12.5l3.2 3.2L17 9"/></svg></span><span class="tx"><b>Люди работают как привыкли</b> — Telegram остаётся Telegram, узбекский и русский в одном окне, обучать долго не нужно</span></li>
+  <li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5"/><path d="M7 12.5l3.2 3.2L17 9"/></svg></span><span class="tx"><b>Делаем под процесс</b> — считают ящиками и пишут голосовыми? Программа принимает ящики и голосовые</span></li>
+  <li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5"/><path d="M7 12.5l3.2 3.2L17 9"/></svg></span><span class="tx"><b>Показываем на живом</b> — модули выше работают сегодня, на встрече дадим потыкать</span></li>
+  <li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5"/><path d="M7 12.5l3.2 3.2L17 9"/></svg></span><span class="tx"><b>Начинаем с малого</b> — первый результат за недели, а не после годового проекта</span></li>
+  <li><span class="ck"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5"/><path d="M7 12.5l3.2 3.2L17 9"/></svg></span><span class="tx"><b>Люди работают как привыкли</b> — Telegram остаётся Telegram, узбекский и русский в одном окне</span></li>
 </ul>
 
-<div class="two rv">
-  <div>
-    <h3>Что в это предложение не входит</h3>
-    <ul class="stag">
-      <li>Точная стоимость и сроки — их считаем после встречи, по вашему объёму.</li>
+<details class="acc rv">
+  <summary>Что в это предложение не входит</summary>
+  <div class="accb">
+    <ul>
+      <li>Точная стоимость и сроки — считаем после встречи, по вашему объёму.</li>
       <li>Обмен с 1С и фискальные документы — оцениваем отдельно.</li>
-      <li>Маршруты машин и контроль доставки — следующий этап, если понадобится.</li>
-      <li>Поставка и наладка оборудования линии розлива — это не к нам.</li>
-      <li>Лабораторные журналы, рецептуры и сертификация продукции.</li>
+      <li>Маршруты машин и контроль доставки — следующий этап.</li>
+      <li>Оборудование линии, рецептуры, лаборатория и сертификация.</li>
     </ul>
-    <p class="note">Честнее назвать цену, посмотрев процесс, чем вписать её наугад в предложение.</p>
+    <p class="note">Честнее назвать цену, посмотрев процесс, чем вписать её наугад.</p>
   </div>
-  <div>
-    <h3>О чём спросим на встрече</h3>
-    <ul class="stag">
+</details>
+<details class="acc rv">
+  <summary>О чём спросим на встрече</summary>
+  <div class="accb">
+    <ul>
       <li>Сколько линий и смен; сколько бутылок в смену в сезон и в межсезонье.</li>
-      <li>Считается ли сейчас себестоимость по SKU и как часто её пересчитывают.</li>
+      <li>Считается ли себестоимость по SKU и как часто её пересчитывают.</li>
       <li>Где фиксируются бой, недолив и брак — и фиксируются ли вообще.</li>
-      <li>Сколько торговых точек и агентов; кто решает, отгружать ли должнику.</li>
-      <li>Ведётся ли номер партии и нужна ли прослеживаемость до точки.</li>
+      <li>Сколько точек и агентов; кто решает, отгружать ли должнику.</li>
       <li>Что болит сильнее: себестоимость, потери на линии или долги.</li>
     </ul>
   </div>
-</div>
+</details>
 
 <div class="next rv">
   <h2>Следующий шаг</h2>
@@ -672,7 +690,7 @@ body::after{width:60vw;height:60vw;max-width:960px;max-height:960px;right:-24vw;
 </main>
 <script>
 (function(){
-  const targets=document.querySelectorAll(".rv,.stag,.chk,.track,.ui,h2");
+  const targets=document.querySelectorAll(".rv,.stag,.chk,.track,.ui,.dgrid,h2");
   const show=e=>e.classList.add("in");
   if(!("IntersectionObserver" in window)||matchMedia("(prefers-reduced-motion: reduce)").matches){targets.forEach(show);return;}
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){show(e.target);io.unobserve(e.target);}}),{threshold:.15,rootMargin:"0px 0px -6% 0px"});

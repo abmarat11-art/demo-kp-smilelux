@@ -518,118 +518,117 @@ body::after{width:60vw;height:60vw;max-width:960px;max-height:960px;right:-24vw;
 </div>
 
 <h2 class="rv">Как это выглядит в работе</h2>
-<p class="rv">Ниже — не картинка из интернета, а один из шести модулей выше: приём заявок. Он работает сегодня, здесь наполнен вашими позициями — чтобы было видно, как это выглядит на TIZER и SOKOF. Остальные пять собираются под ваш процесс тем же способом.</p>
+<p class="rv">Ниже — не картинка из интернета, а рабочие экраны на ваших позициях: путь одной партии TIZER 1,5 от закрытия смены до склада, экран партии с раскладкой себестоимости и отчёт мастера прямо в Telegram.</p>
 <div class="wiz rv" id="wiz">
   <div class="wsteps">
-    <div class="ws" data-i="0"><span class="wc"><i class="ico">1</i></span><b>Заявка принята</b></div>
+    <div class="ws" data-i="0"><span class="wc"><i class="ico">1</i></span><b>Смена закрыта</b></div>
     <span class="wl"><i></i></span>
-    <div class="ws" data-i="1"><span class="wc"><i class="ico">2</i></span><b>Распознано</b></div>
+    <div class="ws" data-i="1"><span class="wc"><i class="ico">2</i></span><b>Сырьё списано</b></div>
     <span class="wl"><i></i></span>
-    <div class="ws" data-i="2"><span class="wc"><i class="ico">3</i></span><b>Сверено с прайсом</b></div>
+    <div class="ws" data-i="2"><span class="wc"><i class="ico">3</i></span><b>Себестоимость</b></div>
     <span class="wl"><i></i></span>
-    <div class="ws" data-i="3"><span class="wc"><i class="ico">4</i></span><b>У оператора</b></div>
+    <div class="ws" data-i="3"><span class="wc"><i class="ico">4</i></span><b>На складе</b></div>
   </div>
   <div class="wcards">
     <div class="wcard" data-i="0">
-      <h4>Заявка</h4>
+      <h4>Смена</h4>
       <div class="body">
-        <div class="row"><span>Канал</span><b>голосовое в Telegram</b></div>
-        <div class="row"><span>Точка</span><b>определена по отправителю</b></div>
-        <div class="row"><span>Исходник</span><b>сохранён при заявке</b></div>
+        <div class="row"><span>Партия</span><b>№312 · TIZER 1,5 л</b></div>
+        <div class="row"><span>Разлито</span><b>9 120 бутылок</b></div>
+        <div class="row"><span>Брак и недолив</span><b class="warn">184 бутылки</b></div>
       </div>
     </div>
     <div class="wcard" data-i="1">
-      <h4>Распознано</h4>
+      <h4>Списано</h4>
       <div class="body">
-        <div class="row"><span>TIZER 0,5 л</span><b>20 ящиков · срочно</b></div>
-        <div class="row"><span>TIZER 1,5 л</span><b>8 ящиков</b></div>
-        <div class="row"><span>SOKOF яблоко 0,95</span><b>10 ящиков</b></div>
-        <div class="row"><span>Вода 5 л</span><b class="warn">«пару упаковок»</b></div>
+        <div class="row"><span>Преформа</span><b>9 340 шт · +2,4 % к норме</b></div>
+        <div class="row"><span>Крышка · этикетка</span><b>9 210 · 9 160</b></div>
+        <div class="row"><span>Сахар · концентрат</span><b>по рецептуре партии</b></div>
       </div>
     </div>
     <div class="wcard" data-i="2">
-      <h4>Сверка</h4>
+      <h4>Себестоимость</h4>
       <div class="body">
-        <div class="row"><span>Сопоставлено</span><b>3 из 4 позиций</b></div>
-        <div class="row"><span>Вода 5 л</span><b class="warn">«упаковка» — сколько бутылок?</b></div>
-        <div class="row"><span>Ящики → бутылки</span><b>пересчитано по прайсу</b></div>
+        <div class="row"><span>Бутылка 1,5 л</span><b>2 480 сум</b></div>
+        <div class="row"><span>Было в прошлой партии</span><b class="warn">2 390 сум · сахар</b></div>
+        <div class="row"><span>Маржа по прайсу</span><b>пересчитана</b></div>
       </div>
     </div>
     <div class="wcard" data-i="3">
-      <h4>У оператора</h4>
+      <h4>Дальше</h4>
       <div class="body">
-        <div class="row"><span>Накладная</span><b>собрана, сумма посчитана</b></div>
-        <div class="row"><span>К проверке</span><b class="warn">одна строка</b></div>
-        <div class="row"><span>Действие</span><b>подтвердить и отгрузить</b></div>
+        <div class="row"><span>На складе</span><b>8 936 бутылок партии №312</b></div>
+        <div class="row"><span>Срок годности</span><b>до 18.03</b></div>
+        <div class="row"><span>Преформы хватит</span><b class="warn">на 2 смены</b></div>
       </div>
     </div>
   </div>
   <button type="button" class="wrun" id="wizRun">Проиграть заново</button>
 </div>
 </div>
-<p class="note rv">Точка пишет в тот же Telegram и тем же способом, что и раньше. Несколько сообщений по одной заявке («и ещё два ящика лимонада») модуль объединяет до подтверждения; повторная отправка того же не создаёт дубль. Исходные сообщения и фото сохраняются при заявке.</p>
+<p class="note rv">Мастер смены не считает ничего руками: он отмечает закрытие партии, дальше списание идёт по рецептуре и по факту, а разница между нормой и фактом сразу видна. Себестоимость пересчитывается на текущих ценах сырья — не раз в квартал, а на каждой партии.</p>
 
 
 <div class="ui rv">
-  <div class="ui-bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">smile lux · заявки и отгрузки</span></div>
+  <div class="ui-bar"><span class="dots"><i></i><i></i><i></i></span><span class="url">smile lux · партии и себестоимость</span></div>
   <div class="ui-body">
     <div class="ui-list">
-      <div class="lh">Очередь <span>7</span></div>
-      <div class="li warn"><b>№1043 · Магазин «Сардор»</b><span>требует уточнения · 1 строка</span></div>
-      <div class="li"><b>№1042 · Оптовик Чиланзар</b><span>ожидает проверки · 6 позиций</span></div>
-      <div class="li"><b>№1041 · Точка Себзор</b><span>ожидает проверки · 3 позиции</span></div>
-      <div class="li done"><b>№1040 · Магазин «Дилноза»</b><span>подтверждена · отгружено</span></div>
-      <div class="li done"><b>№1039 · Кафе «Лаззат»</b><span>подтверждена · отгружено</span></div>
+      <div class="lh">Смены <span>за неделю</span></div>
+      <div class="li warn"><b>№312 · TIZER 1,5 л</b><span>перерасход преформы · 2,4 %</span></div>
+      <div class="li"><b>№311 · SOKOF яблоко</b><span>закрыта · 6 240 бут.</span></div>
+      <div class="li"><b>№310 · TIZER 0,5 л</b><span>закрыта · 14 800 бут.</span></div>
+      <div class="li done"><b>№309 · Вода 5 л</b><span>закрыта · отгружена полностью</span></div>
+      <div class="li done"><b>№308 · TIZER 1,5 л</b><span>закрыта · 2 390 сум/бут.</span></div>
     </div>
     <div class="ui-main">
-      <div class="mh"><b>Заявка №1043</b><span class="tag warn">требует уточнения</span></div>
+      <div class="mh"><b>Партия №312 · TIZER 1,5 л · 9 120 бут.</b><span class="tag warn">перерасход сырья</span></div>
       <div class="mcols">
         <div class="src">
-          <div class="cap">Исходное сообщение</div>
-          <div class="voice"><span class="play">▶</span><span class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
-          <div class="tr">«Салом, на завтра давайте тизер полбаллона двадцать ящиков, полтора литра восемь, сокоф яблоко десять ящиков и воды пять литров пару упаковок. Тизер срочно, сегодня заканчивается.»</div>
+          <div class="cap">Норма и факт</div>
+          <div class="tr">Преформа: по норме 9 120, списано 9 340 — разница 220 шт. Брак и недолив за смену: 184 бутылки. Крышка и этикетка в пределах нормы.</div>
+          <div class="tr">Ответственный за смену: ночная бригада. Такой же перерасход был в партии №306.</div>
         </div>
         <div class="frm">
-          <div class="cap">Форма заявки</div>
+          <div class="cap">Себестоимость бутылки</div>
           <table class="ft">
-            <thead><tr><th>Позиция</th><th>Кол-во</th><th>Ед.</th></tr></thead>
+            <thead><tr><th>Статья</th><th>Сум</th><th>Доля</th></tr></thead>
             <tbody>
-              <tr><td>TIZER 0,5 л<em>срочно</em></td><td>20</td><td>ящ.</td></tr>
-              <tr><td>TIZER 1,5 л</td><td>8</td><td>ящ.</td></tr>
-              <tr><td>SOKOF яблоко 0,95 л</td><td>10</td><td>ящ.</td></tr>
-              <tr class="w"><td>Вода 5 л<em>«упаковка» нет в прайсе</em></td><td>2</td><td>упак.</td></tr>
+              <tr><td>Преформа<em>+2,4 % к норме</em></td><td>780</td><td>31 %</td></tr>
+              <tr><td>Сахар и концентрат</td><td>910</td><td>37 %</td></tr>
+              <tr><td>Крышка и этикетка</td><td>430</td><td>17 %</td></tr>
+              <tr class="w"><td>Газ, вода, энергия<em>выросла с 1 марта</em></td><td>360</td><td>15 %</td></tr>
             </tbody>
           </table>
-          <div class="acts"><span class="btn">Подтвердить и отгрузить</span><span class="btn alt">Уточнить</span><span class="btn alt">Отклонить</span></div>
+          <div class="acts"><span class="btn">Утвердить партию</span><span class="btn alt">Разобрать перерасход</span><span class="btn alt">Сравнить с №308</span></div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<p class="note rv">Исходник всегда рядом: голосовое переслушать, фото накладной открыть, список посмотреть. После подтверждения накладная уходит в расчёт с точкой — сумма ложится в её долг, оплата закрывает его.</p>
+<p class="note rv">Себестоимость разложена по статьям, а не одной суммой: видно, что именно её подняло — подорожавший сахар или лишняя преформа ночной смены. Рядом та же бутылка в прошлой партии, чтобы сравнивать было с чем.</p>
 
 
 <div class="bot rv" id="bot">
   <div class="bot-top">
-    <div><h3>Заявка от точки: голосовое сообщение</h3><p>Как это выглядит в чате: продавец говорит как обычно, дальше работает модуль</p></div>
+    <div><h3>Мастер закрывает смену прямо в Telegram</h3><p>Ни таблиц, ни компьютера в цехе: сообщение из чата — и партия посчитана</p></div>
     <button type="button" class="bot-run" id="botRun"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="7" width="16" height="12" rx="3"/><circle cx="9" cy="13" r="1.3"/><circle cx="15" cy="13" r="1.3"/><path d="M12 3v4"/></svg>Прогнать сценарий</button>
   </div>
   <div class="bot-grid">
     <div class="bot-win">
-      <div class="bot-head"><span class="av"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="7" width="16" height="12" rx="3"/><circle cx="9" cy="13" r="1.3"/><circle cx="15" cy="13" r="1.3"/><path d="M12 3v4"/></svg></span><div><b>SMILE LUX · Заявки</b><small>бот приёма заявок · онлайн</small></div></div>
+      <div class="bot-head"><span class="av"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="7" width="16" height="12" rx="3"/><circle cx="9" cy="13" r="1.3"/><circle cx="15" cy="13" r="1.3"/><path d="M12 3v4"/></svg></span><div><b>SMILE LUX · Цех</b><small>бот смен и партий · онлайн</small></div></div>
       <div class="bot-body" id="botBody"></div>
     </div>
     <div class="bot-side">
       <div class="bot-card">
-        <h4>Что собирает бот</h4>
+        <h4>Что считает бот</h4>
         <ul>
-          <li><span class="ic">🏪</span><div><b>Точка</b><small>по отправителю или выбором, если связь не настроена</small></div></li>
-          <li><span class="ic">🧃</span><div><b>Позиции</b><small>вкус, объём, количество в ящиках или бутылках</small></div></li>
-          <li><span class="ic">💵</span><div><b>Сумма</b><small>цена из прайса точки, скидка если есть</small></div></li>
-          <li><span class="ic">⚠️</span><div><b>Спорные места</b><small>что расслышано или прочитано неуверенно</small></div></li>
+          <li><span class="ic">🏭</span><div><b>Выход смены</b><small>разлито, брак и недолив по партии</small></div></li>
+          <li><span class="ic">📦</span><div><b>Списание сырья</b><small>норма по рецептуре против факта на складе</small></div></li>
+          <li><span class="ic">💵</span><div><b>Себестоимость бутылки</b><small>на ценах сырья этой партии, а не прошлого квартала</small></div></li>
+          <li><span class="ic">⚠️</span><div><b>Что кончается</b><small>на сколько смен хватит преформы, крышки, концентрата</small></div></li>
         </ul>
       </div>
-      <div class="bot-note">От точки не требуется заполнять поля и нажимать кнопки — сообщение отправлено, дальше разбирается на вашей стороне. Кто подтверждает накладную — оператор, агент или оба — согласуем до начала работ.</div>
+      <div class="bot-note">От мастера не требуется заполнять таблицы: написал итог смены — остальное программа берёт из рецептуры, остатков и текущих цен сырья. Кто утверждает партию — технолог, бухгалтер или оба — согласуем до начала работ.</div>
     </div>
   </div>
 </div>
@@ -701,10 +700,10 @@ body::after{width:60vw;height:60vw;max-width:960px;max-height:960px;right:-24vw;
 (function(){
   var body=document.getElementById("botBody"), btn=document.getElementById("botRun"), root=document.getElementById("bot");
   var script=[
-    {from:"u",tag:"Точка · голосовое",text:"«Салом, на завтра давайте тизер полбаллона двадцать ящиков, полтора литра восемь, сокоф яблоко десять ящиков и воды пять литров пару упаковок. Тизер срочно, сегодня заканчивается.»"},
-    {from:"b",tag:"Заявка №1043 · принята",text:"Принял. Собрал заявку:",
-     card:{t:"Точка определена по отправителю",rows:[["TIZER 0,5 л","20 ящиков · срочно"],["TIZER 1,5 л","8 ящиков"],["SOKOF яблоко 0,95","10 ящиков"],["Вода 5 л","«пару упаковок» ⚠"],["Сумма по прайсу","посчитана без спорной строки"]]}},
-    {from:"b",text:"Одна строка неоднозначна: «пару упаковок» — в прайсе вода считается бутылками. Её разберёт оператор.",em:"Отвечать не нужно — сообщим, когда заявка будет отгружена."}
+    {from:"u",tag:"Цех · мастер смены",text:"«Смену закрыл. Тизер полтора литра, партия 312 — девять тысяч сто двадцать бутылок. Брака сто восемьдесят четыре, преформы ушло больше обычного.»"},
+    {from:"b",tag:"Партия №312 · посчитана",text:"Принял. Посчитал партию:",
+     card:{t:"Рецептура и остатки подтянуты сами",rows:[["Разлито","9 120 бутылок"],["Брак и недолив","184 бутылки"],["Преформа","9 340 шт · +2,4 % к норме ⚠"],["Себестоимость","2 480 сум за бутылку"],["Было в №308","2 390 сум"]]}},
+    {from:"b",text:"Рост на 90 сум — из-за сахара и лишней преформы. Такой же перерасход был в партии №306, тоже ночная смена.",em:"Отвечать не нужно — партия ушла технологу на утверждение."}
   ];
   var timers=[];function clear(){timers.forEach(clearTimeout);timers=[];}
   function el(h){var d=document.createElement("div");d.innerHTML=h;return d.firstElementChild;}
@@ -714,7 +713,7 @@ body::after{width:60vw;height:60vw;max-width:960px;max-height:960px;right:-24vw;
     return el(h+'</div></div>');
   }
   function done(){
-    body.appendChild(el('<div class="bot-done"><span class="ck">✓</span><div><b>Заявка №1043 отгружена.</b> Вода 5 л — 12 бутылок: оператор сопоставил «упаковку» с 6 бутылками и запомнил это для вашей точки. Накладная собрана, сумма ушла в расчёт, голосовое сохранено при заявке.</div></div>'));
+    body.appendChild(el('<div class="bot-done"><span class="ck">✓</span><div><b>Партия №312 утверждена.</b> 8 936 бутылок встали на склад со сроком до 18.03 и своей себестоимостью. Снабжению ушло предупреждение: преформы хватит на 2 смены. Сообщение мастера сохранено при партии.</div></div>'));
   }
   function typing(cb){var t=el('<div class="bot-typing"><span></span></div>');body.appendChild(t);timers.push(setTimeout(function(){t.remove();cb();},700));}
   function run(){clear();body.innerHTML="";var i=0;(function tick(){if(i>=script.length){timers.push(setTimeout(function(){typing(done)},1400));return;}typing(function(){body.appendChild(msg(script[i]));i++;timers.push(setTimeout(tick,600));});})();}

@@ -415,16 +415,16 @@ body::after{width:60vw;height:60vw;max-width:960px;max-height:960px;right:-24vw;
 .two .note{margin-top:10px}
 
 /* обзор возможностей */
-.cap-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
-.cap{border:1px solid var(--line);background:#fff;border-radius:14px;padding:18px 18px 16px;opacity:0;transform:translateY(8px);transition:opacity .5s ease,transform .5s ease}
-.cap-grid.in .cap{opacity:1;transform:none}
-.cap-grid.in .cap:nth-child(2){transition-delay:.08s}.cap-grid.in .cap:nth-child(3){transition-delay:.16s}
-.cap-grid.in .cap:nth-child(4){transition-delay:.24s}.cap-grid.in .cap:nth-child(5){transition-delay:.32s}
-.cap-grid.in .cap:nth-child(6){transition-delay:.4s}
-.cap h3{margin:0 0 8px;font-size:17px}
-.cap p{font-size:15px;color:var(--mut);line-height:1.6}
-.cap .tag{display:inline-block;margin-top:12px;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--acc);background:var(--acc2);border-radius:99px;padding:4px 10px}
-@media(max-width:720px){.cap-grid{grid-template-columns:1fr}}
+.caps{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
+.cbox{border:1px solid var(--line);background:#fff;border-radius:14px;padding:18px 18px 16px;opacity:0;transform:translateY(8px);transition:opacity .5s ease,transform .5s ease}
+.caps.in .cbox{opacity:1;transform:none}
+.caps.in .cbox:nth-child(2){transition-delay:.08s}.caps.in .cbox:nth-child(3){transition-delay:.16s}
+.caps.in .cbox:nth-child(4){transition-delay:.24s}.caps.in .cbox:nth-child(5){transition-delay:.32s}
+.caps.in .cbox:nth-child(6){transition-delay:.4s}
+.cbox h3{margin:0 0 8px;font-size:17px}
+.cbox p{font-size:15px;color:var(--mut);line-height:1.6}
+.cbox .tag{display:inline-block;margin-top:12px;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--acc);background:var(--acc2);border-radius:99px;padding:4px 10px}
+@media(max-width:720px){.caps{grid-template-columns:1fr}}
 /* блок «что мы поняли» */
 .facts{margin-top:20px;border-left:3px solid var(--acc);background:#fff;border-radius:0 12px 12px 0;padding:16px 18px}
 .facts dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:15px}
@@ -466,33 +466,33 @@ body::after{width:60vw;height:60vw;max-width:960px;max-height:960px;right:-24vw;
 
 <h2 class="rv">Что мы можем закрыть</h2>
 <p class="rv">Шесть направлений. Начинать сразу со всех не нужно — обычно берут одно, самое болезненное, и расширяют по ходу.</p>
-<div class="cap-grid rv">
-  <div class="cap">
+<div class="caps rv">
+  <div class="cbox">
     <h3>Заявки от точек и агентов</h3>
     <p>Точка пишет в Telegram как привыкла — текстом, голосом, фото. Программа собирает из этого накладную по вашему прайсу, пересчитывает ящики в бутылки и помечает спорное. Оператор проверяет только спорные строки.</p>
     <span class="tag">есть готовый модуль</span>
   </div>
-  <div class="cap">
+  <div class="cbox">
     <h3>Расчёты и долги</h3>
     <p>По каждой точке видно: отгружено, оплачено, сколько осталось. История до каждой строки, сверка за период, итог по всем точкам на одном экране — вместо тетради и Excel на одном компьютере.</p>
     <span class="tag">есть готовый модуль</span>
   </div>
-  <div class="cap">
+  <div class="cbox">
     <h3>Торговые агенты в поле</h3>
     <p>Агент со своего телефона заводит точку, пишет заявку и принимает оплату. Видит только свои точки и свой итог; руководитель видит всех и правит любую запись.</p>
     <span class="tag">есть готовый модуль</span>
   </div>
-  <div class="cap">
+  <div class="cbox">
     <h3>Отгрузка и движение товара</h3>
     <p>Что уехало, кому и на какой машине; сколько отгружено по вкусам и объёмам за период. Отсюда же видно, какая позиция реально продаётся, а какая лежит.</p>
     <span class="tag">под ваш процесс</span>
   </div>
-  <div class="cap">
+  <div class="cbox">
     <h3>Производство и склад</h3>
     <p>Сколько разлито по сменам, расход преформы, крышки, этикетки и концентрата, остатки на складе готовой продукции. Собирается под ваши нормы, а не по универсальному шаблону.</p>
     <span class="tag">под ваш процесс</span>
   </div>
-  <div class="cap">
+  <div class="cbox">
     <h3>Экран руководителя</h3>
     <p>Один экран с деньгами: сколько за точками, сколько пришло за неделю, кто не платит дольше срока. Открывается с телефона — не нужно быть в офисе, чтобы понимать положение дел.</p>
     <span class="tag">под ваш процесс</span>
@@ -567,12 +567,12 @@ body::after{width:60vw;height:60vw;max-width:960px;max-height:960px;right:-24vw;
       <div class="mh"><b>Заявка №1043</b><span class="tag warn">требует уточнения</span></div>
       <div class="mcols">
         <div class="src">
-          <div class="cap">Исходное сообщение</div>
+          <div class="cbox">Исходное сообщение</div>
           <div class="voice"><span class="play">▶</span><span class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>
           <div class="tr">«Салом, на завтра давайте тизер полбаллона двадцать ящиков, полтора литра восемь, сокоф яблоко десять ящиков и воды пять литров пару упаковок. Тизер срочно, сегодня заканчивается.»</div>
         </div>
         <div class="frm">
-          <div class="cap">Форма заявки</div>
+          <div class="cbox">Форма заявки</div>
           <table class="ft">
             <thead><tr><th>Позиция</th><th>Кол-во</th><th>Ед.</th></tr></thead>
             <tbody>
